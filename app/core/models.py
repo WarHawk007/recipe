@@ -16,7 +16,7 @@ class UserManager(BaseUserManager):
 
         return user
 
-    def create_super_user(self, email, password=None, **kwargs):
+    def create_superuser(self, email, password=None, **kwargs):
         if not email:
             raise ValueError('Email must be provided')
         user = self.create_user(email, password, is_superuser=True, is_staff=True)
